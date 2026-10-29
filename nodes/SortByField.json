@@ -1,0 +1,33 @@
+{
+  "kind": "SortByField",
+  "major": 1,
+  "title": "Sort By Field",
+  "category": "Array",
+  "pure": true,
+  "inputs": [
+    {
+      "name": "array",
+      "type": "Array",
+      "default": []
+    },
+    {
+      "name": "field",
+      "type": "String",
+      "default": ""
+    },
+    {
+      "name": "descending",
+      "type": "Bool",
+      "default": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "Array",
+      "default": []
+    }
+  ],
+  "fields": {},
+  "as2Template": "templates/SortByField.as2"
+}

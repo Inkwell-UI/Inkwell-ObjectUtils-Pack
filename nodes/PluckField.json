@@ -1,0 +1,28 @@
+{
+  "kind": "PluckField",
+  "major": 1,
+  "title": "Pluck Field",
+  "category": "Array",
+  "pure": true,
+  "inputs": [
+    {
+      "name": "array",
+      "type": "Array",
+      "default": []
+    },
+    {
+      "name": "field",
+      "type": "String",
+      "default": ""
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "Array",
+      "default": []
+    }
+  ],
+  "fields": {},
+  "as2Template": "templates/PluckField.as2"
+}

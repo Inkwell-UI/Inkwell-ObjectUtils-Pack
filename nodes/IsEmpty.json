@@ -1,0 +1,23 @@
+{
+  "kind": "IsEmpty",
+  "major": 1,
+  "title": "Is Empty",
+  "category": "Array",
+  "pure": true,
+  "inputs": [
+    {
+      "name": "array",
+      "type": "Array",
+      "default": []
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "Bool",
+      "default": false
+    }
+  ],
+  "fields": {},
+  "as2Template": "templates/IsEmpty.as2"
+}
