@@ -1,0 +1,23 @@
+{
+  "kind": "Keys",
+  "major": 1,
+  "title": "Keys",
+  "category": "Object",
+  "pure": true,
+  "inputs": [
+    {
+      "name": "object",
+      "type": "Object",
+      "default": {}
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "Array",
+      "default": []
+    }
+  ],
+  "fields": {},
+  "as2Template": "templates/Keys.as2"
+}

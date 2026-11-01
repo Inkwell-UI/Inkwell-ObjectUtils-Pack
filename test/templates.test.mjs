@@ -14,11 +14,13 @@ test("every template agrees with its pins and fields", () => {
   for (const n of nodes) assert.deepEqual(checkTemplate(n.def, n.text, manifest.id), [], n.id);
 });
 
-test("every node is pure, in category Array, with one 'value' output", () => {
-  assert.equal(nodes.length, 29);
+const OBJECT_KINDS = ["HasField", "Keys", "Values", "Merge", "RemoveField", "Clone"];
+
+test("every node is pure with one 'value' output; the six object nodes are in category Object, the rest in Array", () => {
+  assert.equal(nodes.length, 35);
   for (const n of nodes) {
     assert.equal(n.def.pure, true, n.id);
-    assert.equal(n.def.category, "Array", n.id);
+    assert.equal(n.def.category, OBJECT_KINDS.includes(n.def.kind) ? "Object" : "Array", n.id);
     assert.deepEqual(n.def.outputs.map((o) => o.name), ["value"], n.id);
   }
 });
@@ -135,4 +137,38 @@ test("Shuffle keeps the same items", () => {
   const got = run("Shuffle", { array: [1, 2, 3, 4, 5, 6] });
   assert.deepEqual([...got].sort(), [1, 2, 3, 4, 5, 6]);
   assert.deepEqual(run("Shuffle", { array: [] }), []);
+});
+
+const rec = { b: 1, a: 2 };
+const objCases = [
+  ["HasField", { object: { a: 1 }, key: "a" }, true],
+  ["HasField", { object: { a: 1 }, key: "b" }, false],
+  ["HasField", { object: [1], key: "0" }, false],
+  ["HasField", { object: null, key: "a" }, false],
+  ["Keys", { object: rec }, ["a", "b"]],
+  ["Keys", { object: {} }, []],
+  ["Keys", { object: "nope" }, []],
+  ["Values", { object: rec }, [2, 1]],
+  ["Values", { object: [5] }, []],
+  ["Merge", { a: { a: 1, b: 2 }, b: { b: 3, c: 4 } }, { a: 1, b: 3, c: 4 }],
+  ["Merge", { a: { a: 1 }, b: "nope" }, { a: 1 }],
+  ["RemoveField", { object: { a: 1, b: 2 }, key: "a" }, { b: 2 }],
+  ["RemoveField", { object: { a: 1 }, key: "zz" }, { a: 1 }],
+  ["Clone", { object: { a: 1, b: [2] } }, { a: 1, b: [2] }],
+  ["Clone", { object: [1] }, {}],
+];
+
+for (const [kind, inputs, want] of objCases) {
+  test(`${kind} ${JSON.stringify(inputs)}`, () => assert.deepEqual(run(kind, inputs), want));
+}
+
+test("object nodes leave their input alone", () => {
+  const src = { b: 1, a: 2 };
+  for (const [kind, extra] of [["Merge", { b: { z: 9 } }], ["RemoveField", { key: "a" }], ["Clone", {}], ["Keys", {}], ["Values", {}]]) {
+    run(kind, { object: src, a: src, ...extra });
+    assert.deepEqual(src, { b: 1, a: 2 }, kind);
+  }
+  const copy = run("Clone", { object: src });
+  copy.a = 99;
+  assert.equal(src.a, 2);
 });

@@ -1,0 +1,23 @@
+{
+  "kind": "Values",
+  "major": 1,
+  "title": "Values",
+  "category": "Object",
+  "pure": true,
+  "inputs": [
+    {
+      "name": "object",
+      "type": "Object",
+      "default": {}
+    }
+  ],
+  "outputs": [
+    {
+      "name": "value",
+      "type": "Array",
+      "default": []
+    }
+  ],
+  "fields": {},
+  "as2Template": "templates/Values.as2"
+}

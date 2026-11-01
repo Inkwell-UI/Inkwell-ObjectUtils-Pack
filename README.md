@@ -1,6 +1,6 @@
 # ObjectUtils
 
-An Inkwell node pack with 29 array utilities (Index Of, Get, Slice, Unique, Sort, Shuffle, Sum, Pluck Field, Filter By Field and more), all pure nodes in the category Array. Pack id `objectutils`; nodes are `objectutils/<Kind>@1`. See `CHANGELOG.md` for the list.
+An Inkwell node pack with 29 array utilities (Index Of, Get, Slice, Unique, Sort, Shuffle, Sum, Pluck Field, Filter By Field and more; category Array) and 6 object utilities (Has Field, Keys, Values, Merge, Remove Field, Clone; category Object), all pure nodes. Pack id `objectutils`; nodes are `objectutils/<Kind>@1`. See `CHANGELOG.md` for the list.
 
 ```
 manifest.json        pack id, version, compatible tool range
@@ -22,3 +22,4 @@ Behaviour worth knowing:
 - Range and Repeat cap their result at 1000 items. Average, Min Of and Max Of of an empty array are 0; non-numeric items count as 0 in Sum, Average, Min Of and Max Of.
 - Sort and Sort By Field compare numbers numerically and everything else as text. Shuffle is random on every evaluation.
 - Flash 8 arrays have no `indexOf`, `filter` or `map`, so the templates loop by hand.
+- The object nodes return a new object and never change the one they are given. A wire that is not an object counts as `{}`. Keys and Values are in sorted key order; Merge lets `b` win; Clone is shallow (nested objects and arrays are shared).
