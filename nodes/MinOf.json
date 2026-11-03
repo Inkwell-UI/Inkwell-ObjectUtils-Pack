@@ -19,5 +19,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/MinOf.as2"
+  "as2Template": "templates/MinOf.as2",
+  "extra": {
+    "inspector": {
+      "description": "Gives the smallest number in a list."
+    }
+  }
 }

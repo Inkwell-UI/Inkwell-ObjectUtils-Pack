@@ -38,5 +38,10 @@
       "description": "Pin type of the untyped item or value (the Any-like convention: the output is coerced to this type)"
     }
   },
-  "as2Template": "templates/CountOf.as2"
+  "as2Template": "templates/CountOf.as2",
+  "extra": {
+    "inspector": {
+      "description": "Counts how many times a value appears in a list."
+    }
+  }
 }

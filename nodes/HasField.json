@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/HasField.as2"
+  "as2Template": "templates/HasField.as2",
+  "extra": {
+    "inspector": {
+      "description": "True when an object has a field with the given name."
+    }
+  }
 }

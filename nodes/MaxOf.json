@@ -19,5 +19,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/MaxOf.as2"
+  "as2Template": "templates/MaxOf.as2",
+  "extra": {
+    "inspector": {
+      "description": "Gives the largest number in a list."
+    }
+  }
 }

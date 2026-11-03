@@ -19,5 +19,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Average.as2"
+  "as2Template": "templates/Average.as2",
+  "extra": {
+    "inspector": {
+      "description": "Gives the average of the numbers in a list."
+    }
+  }
 }

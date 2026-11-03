@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Merge.as2"
+  "as2Template": "templates/Merge.as2",
+  "extra": {
+    "inspector": {
+      "description": "Combines two objects. Fields of the second win."
+    }
+  }
 }

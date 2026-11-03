@@ -19,5 +19,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Length.as2"
+  "as2Template": "templates/Length.as2",
+  "extra": {
+    "inspector": {
+      "description": "Counts the items in a list."
+    }
+  }
 }

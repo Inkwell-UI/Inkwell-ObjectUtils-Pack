@@ -43,5 +43,10 @@
       "description": "Pin type of the untyped item or value (the Any-like convention: the output is coerced to this type)"
     }
   },
-  "as2Template": "templates/FilterByField.as2"
+  "as2Template": "templates/FilterByField.as2",
+  "extra": {
+    "inspector": {
+      "description": "Keeps the objects in a list whose field matches a value."
+    }
+  }
 }

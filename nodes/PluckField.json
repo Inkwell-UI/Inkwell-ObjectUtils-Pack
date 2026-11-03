@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/PluckField.as2"
+  "as2Template": "templates/PluckField.as2",
+  "extra": {
+    "inspector": {
+      "description": "Collects one field from every object in a list."
+    }
+  }
 }

@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Sort.as2"
+  "as2Template": "templates/Sort.as2",
+  "extra": {
+    "inspector": {
+      "description": "Sorts a list from low to high, or high to low."
+    }
+  }
 }

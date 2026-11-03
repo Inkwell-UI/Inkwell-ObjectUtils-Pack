@@ -29,5 +29,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/SortByField.as2"
+  "as2Template": "templates/SortByField.as2",
+  "extra": {
+    "inspector": {
+      "description": "Sorts a list of objects by one of their fields."
+    }
+  }
 }

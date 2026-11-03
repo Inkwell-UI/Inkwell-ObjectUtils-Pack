@@ -29,5 +29,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Range.as2"
+  "as2Template": "templates/Range.as2",
+  "extra": {
+    "inspector": {
+      "description": "Makes a list of numbers counting from a start."
+    }
+  }
 }

@@ -19,5 +19,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Keys.as2"
+  "as2Template": "templates/Keys.as2",
+  "extra": {
+    "inspector": {
+      "description": "Lists the field names of an object."
+    }
+  }
 }

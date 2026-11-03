@@ -29,5 +29,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Slice.as2"
+  "as2Template": "templates/Slice.as2",
+  "extra": {
+    "inspector": {
+      "description": "Takes part of a list, starting at an index."
+    }
+  }
 }

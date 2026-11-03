@@ -38,5 +38,10 @@
       "description": "Pin type of the untyped item or value (the Any-like convention: the output is coerced to this type)"
     }
   },
-  "as2Template": "templates/Contains.as2"
+  "as2Template": "templates/Contains.as2",
+  "extra": {
+    "inspector": {
+      "description": "True when a list holds a value."
+    }
+  }
 }

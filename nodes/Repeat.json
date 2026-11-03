@@ -38,5 +38,10 @@
       "description": "Pin type of the untyped item or value (the Any-like convention: the output is coerced to this type)"
     }
   },
-  "as2Template": "templates/Repeat.as2"
+  "as2Template": "templates/Repeat.as2",
+  "extra": {
+    "inspector": {
+      "description": "Makes a list that repeats one item several times."
+    }
+  }
 }

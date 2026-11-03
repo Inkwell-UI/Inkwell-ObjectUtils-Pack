@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/Concat.as2"
+  "as2Template": "templates/Concat.as2",
+  "extra": {
+    "inspector": {
+      "description": "Joins two lists into one."
+    }
+  }
 }

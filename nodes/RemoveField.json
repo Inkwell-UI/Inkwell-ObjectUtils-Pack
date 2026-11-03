@@ -24,5 +24,10 @@
     }
   ],
   "fields": {},
-  "as2Template": "templates/RemoveField.as2"
+  "as2Template": "templates/RemoveField.as2",
+  "extra": {
+    "inspector": {
+      "description": "Removes a field from an object."
+    }
+  }
 }
