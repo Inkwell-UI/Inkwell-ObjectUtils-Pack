@@ -1,7 +1,7 @@
 {
   "kind": "Join",
   "major": 1,
-  "title": "Join",
+  "title": "Array Join",
   "category": "Array",
   "pure": true,
   "inputs": [

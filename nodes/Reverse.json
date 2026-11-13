@@ -1,7 +1,7 @@
 {
   "kind": "Reverse",
   "major": 1,
-  "title": "Reverse",
+  "title": "Array Reverse",
   "category": "Array",
   "pure": true,
   "inputs": [

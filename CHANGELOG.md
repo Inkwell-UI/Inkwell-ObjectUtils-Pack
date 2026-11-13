@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+Titles only (kinds, pins and templates are unchanged): the array nodes whose title clashed with another pack in the node picker now start with "Array": Array Concat, Array Join, Array Contains, Array Index Of, Array Is Empty, Array Repeat, Array Reverse.
+
 ## 0.2.2
 
 Supports any Inkwell from 0.5.0 on (compatible.tool is now >=0.5.0 instead of ^0.x). No node, pin, field or template changed.

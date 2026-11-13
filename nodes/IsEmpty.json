@@ -1,7 +1,7 @@
 {
   "kind": "IsEmpty",
   "major": 1,
-  "title": "Is Empty",
+  "title": "Array Is Empty",
   "category": "Array",
   "pure": true,
   "inputs": [

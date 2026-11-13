@@ -1,7 +1,7 @@
 {
   "kind": "Repeat",
   "major": 1,
-  "title": "Repeat",
+  "title": "Array Repeat",
   "category": "Array",
   "pure": true,
   "inputs": [
